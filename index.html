@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annuaire Communautaire - Trouvez les meilleurs services locaux</title>
+    <meta name="description" content="Annuaire de services communautaire pour trouver des artisans, commerces et services locaux">
+    <meta name="keywords" content="annuaire, services, artisans, commerces, local, communauté">
+    <meta property="og:title" content="Annuaire Communautaire">
+    <meta property="og:description" content="Trouvez les meilleurs services locaux">
+    <meta name="twitter:title" content="Annuaire Communautaire">
+    <meta name="twitter:description" content="Trouvez les meilleurs services locaux">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #f59e0b;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+        }
+    }
+
+    @layer base {
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--text-dark);
+        }
+    }
+
+    @layer utilities {
+        .hero-map-bg {
+            background-image: 
+                linear-gradient(90deg, rgba(255, 140, 56, 0.95) 0%, rgba(255, 140, 56, 0.90) 33%, rgba(255, 255, 255, 0.85) 33%, rgba(255, 255, 255, 0.85) 66%, rgba(0, 153, 100, 0.90) 66%, rgba(0, 153, 100, 0.95) 100%),
+                url('https://static.vecteezy.com/system/resources/previews/002/905/412/non_2x/outline-simple-map-of-ivory-coast-free-vector.jpg');
+            background-size: cover, 60%;
+            background-position: center, center right;
+            background-repeat: no-repeat, no-repeat;
+        }
+    }
+    </style>
+</head>
+<body class="bg-[var(--bg-light)]">
+    <div id="root"></div>
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/SearchBar.js"></script>
+    <script type="text/babel" src="components/CategoryCard.js"></script>
+    <script type="text/babel" src="components/Footer.js"></script>
+    <script type="text/babel" src="utils/data.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
